@@ -100,6 +100,13 @@ export default {
           behavior: 'smooth'
         });
       }
+      else if ((window.pageYOffset <= 0)) {
+        window.scroll({
+          top: 10,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
     }
   },
   mounted() {
