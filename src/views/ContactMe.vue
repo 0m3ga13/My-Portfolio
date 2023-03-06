@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen max-h-full  flex flex-col justify-center items-center bg-yellow-50">
-    <div class="absolute">
+    <div class="absolute mb-48 sm:mb-0">
       <div class="relative bg-white font-semibold text-center rounded-3xl border shadow-lg p-10 max-w-xs z-10"
         :style="{ left: containerLeft, transition: 'left 1s' }">
 
@@ -17,7 +17,7 @@
       </div>
 
     </div>
-    <div class="sticky ml-48">
+    <div class="sticky ml-48 mb-48 sm:mb-0">
       <a class="ml-3 text-gray-500" href="https://www.facebook.com/ome.ga.351" target="_blank" rel="noopener noreferrer">
         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10"
           viewBox="0 0 24 24">
