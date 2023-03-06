@@ -95,7 +95,7 @@ export default {
     moveContainerLeft() {
       this.containerLeft = "-100px";
     },
-    onScroll() {
+ onScroll() {
       if (window.pageYOffset <= 0) {
         this.$router.push('/projects');
         window.scroll({
