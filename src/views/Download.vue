@@ -73,3 +73,43 @@
     </div>
   </div>
 </template>
+
+
+<script>
+export default {
+  data() {
+    return {
+      containerLeft: "0px",
+      lastScrollTop: 0,
+    };
+  },
+  methods: {
+    moveContainerLeft() {
+      this.containerLeft = "-100px";
+    },
+    onScroll() {
+      if (window.pageYOffset <= 0) {
+        this.$router.push('/contact');
+        window.scroll({
+          top: 5,
+          left: 0,
+          behavior: 'smooth'
+        });
+      } else if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+                window.scroll({
+          top: 10,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll)
+  }
+};
+</script>
