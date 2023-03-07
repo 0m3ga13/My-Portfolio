@@ -3,7 +3,7 @@
 
 Welcome to my portfolio! This website showcases my skills and experiences as a front-end developer. The website was built using Vue.js and styled with Tailwind CSS. 
 
-DEMO: <a href="https://0m3ga13.netlify.app/" target="_blank"> Here.. </a>
+DEMO: <a href="https://0m3ga13.netlify.app/" target="_blank" rel="noopener noreferrer"> Here.. </a>
 ## Table of Contents
 - [Technologies Used](#technologies-used)
 - [Features](#features)
