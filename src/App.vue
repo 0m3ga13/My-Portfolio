@@ -45,5 +45,8 @@ import Navbar from './components/navbar.vue';
   opacity: 0;
   transform: translateY(-10%);
 }
+body{
+  background-color: gray;
+}
 
 </style>
