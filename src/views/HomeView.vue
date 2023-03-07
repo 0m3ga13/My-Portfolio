@@ -1,13 +1,13 @@
 <template>
-  <div class="h-screen flex flex-col md:justify-center items-center bg-yellow-50 overflow-hidden">
+  <div class="h-screen flex flex-col md:justify-center items-center bg-yellow-50 dark:bg-gray-900 overflow-hidden">
     <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
       <div
         class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-        <h1 class=" hi title-font lg:text-7xl text-3xl md:text-5xl mb-4 font-medium text-gray-900">Hi
+        <h1 class=" hi title-font lg:text-7xl text-3xl md:text-5xl mb-4 font-medium text-gray-900 dark:text-white">Hi
           <br class=" hidden lg:inline-block">
         </h1>
-        <h2 class="name title-font lg:text-7xl md:text-5xl  text-3xl mb-4 font-medium text-gray-900">I am Oussama</h2>
-        <p class="description mb-8 leading-relaxed lg:text-4xl md:text-2xl text-xl">an enthusiastic web developer</p>
+        <h2 class="name title-font lg:text-7xl md:text-5xl  text-3xl mb-4 font-medium text-gray-900 dark:text-white">I am Oussama</h2>
+        <p class="description mb-8 leading-relaxed lg:text-4xl md:text-2xl text-xl dark:text-white">an enthusiastic web developer</p>
       </div>
       <a class="lg:max-w-xl lg:w-full w-1/2 mb-10 md:mb-0 " href="https://github.com/0m3ga13/" target="_blank">
         <img class="imagecontainer shadow-lg object-cover object-center rounded lg:w-3/4 rounded-3xl" alt="hero"
@@ -21,7 +21,7 @@
       </svg>
     </router-link>
     <router-link to="/projects" class="sm:hidden max-sm:fixed bottom-5 transition-colors duration-300">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-15 h-10 animate-bounce bi bi-arrow-up"
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="dark:text-white w-15 h-10 animate-bounce bi bi-arrow-up"
         viewBox="0 0 16 16">
         <path fill-rule="evenodd"
           d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
