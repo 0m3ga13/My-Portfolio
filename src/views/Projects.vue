@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen flex flex-col  items-center bg-yellow-50 dark:bg-gray-900 dark:text-white overflow-hidden">
+  <div class="min-h-screen flex flex-col  items-center bg-yellow-50 dark:bg-gray-900 dark:text-white overflow-hidden">
     <div class=" container mx-auto flex px-5 py-24 sm:py-10 md:flex-row flex-col items-center">
       <h1 class="projects text-4xl sm:text-7xl dark:text-white">My Projects</h1>
       <swiper :modules="modules" navigation
