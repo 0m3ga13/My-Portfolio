@@ -10,6 +10,7 @@
   "dependencies": {
     "@coreui/coreui": "^4.2.6",
     "@coreui/vue": "^4.7.0",
+    "@vueuse/core": "^9.13.0",
     "sass": "^1.58.3",
     "swiper": "^9.1.0",
     "vue": "^3.2.47",
