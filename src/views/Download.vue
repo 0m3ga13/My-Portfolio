@@ -1,10 +1,10 @@
 <template>
-  <div class="h-screen  py-24  bg-yellow-50">
-    <div class="sm:flex absolute items-center  justify-center">
+  <div class=" h-screen  bg-yellow-50 dark:bg-gray-900 dark:text-white overflow-hidden ">
+    <div class="sm:flex py-24 items-center  justify-center">
       <div class="p-4 lg:w-1/2 md:w-full">
-        <div class=" relative bg-white font-semibold text-center rounded-3xl border shadow-lg p-10 ">
-          <div class="sm:w-16 w-32 h-16 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 flex-shrink-0">
-            <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+        <div class=" relative bg-white dark:bg-black dark:border-black font-semibold text-center rounded-3xl border shadow-lg p-10 ">
+          <div class="sm:w-32 w-32  h-32 sm:mb-4 mb-4 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 ">
+            <svg fill="#00000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 width="80px" height="80px" viewBox="0 0 419.931 419.931"
 	 xml:space="preserve">
 <g>
@@ -59,7 +59,7 @@
 </svg>           
           </div>
           <div class="flex-grow">
-            <h2 class="text-gray-900 text-xl title-font mb-3">My resume</h2>
+            <h2 class="text-gray-900 dark:text-white text-xl title-font mb-3">My resume</h2>
             <p class="leading-relaxed font-thin text-base">As a polytechnical engineer with experience as a content operations specialist, I channel my enthusiasm and creativity into web development, constantly seeking innovative ways to turn my ideas into digital reality.</p>
             <a class="mt-3 text-yellow-500 inline-flex items-center" href="https://drive.google.com/file/d/1VHXmugd2tccfqAfCTaqgBNdDhZJbN_W1/view?usp=sharing" target="_blank" rel="noopener noreferrer">More about me
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
