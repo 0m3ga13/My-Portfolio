@@ -32,7 +32,7 @@ This website includes the following features:
 To get a copy of this project up and running on your local machine, please follow these steps:
 
 1. Clone the repository
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/0m3ga13/My-Portfolio
 
 
 ## Customize configuration
