@@ -1,15 +1,15 @@
 <template>
-  <div class="h-screen max-h-full  flex flex-col justify-center items-center bg-yellow-50">
-    <div class="absolute mb-48">
-      <div class="relative bg-white font-semibold text-center rounded-3xl border shadow-lg p-10 max-w-xs z-10"
+  <div class="h-screen max-h-full  flex flex-col justify-center dark:bg-gray-900 dark:text-white items-center bg-yellow-50">
+    <div class="absolute mb-48 ">
+      <div class="relative bg-white dark:bg-black dark:border-black/50 font-semibold text-center rounded-3xl border shadow-lg p-10 max-w-xs z-10"
         :style="{ left: containerLeft, transition: 'left 1s' }">
 
         <img class="mb-3 w-32 h-32 rounded-full shadow-lg mx-auto"
           src="https://media.licdn.com/dms/image/C4E03AQF5mTvMbEiUkg/profile-displayphoto-shrink_800_800/0/1653662430008?e=1683763200&v=beta&t=D5NSepCEGC5nm8u9XH3d6MLN2R1V1i6FIEugo9MyCos"
           alt="web developer">
-        <h1 class="text-lg text-gray-700">Oussama BARKA </h1>
-        <h3 class="text-sm text-gray-400 "> web developer </h3>
-        <p class="text-xs text-gray-400 mt-4"> My passion for web development fuels my creative spirit, inspiring me to
+        <h1 class="text-lg text-gray-700 dark:text-gray-200">Oussama BARKA </h1>
+        <h3 class="text-sm text-gray-400 dark:text-gray-600"> web developer </h3>
+        <p class="text-xs text-gray-600 mt-4 dark:text-gray-400"> My passion for web development fuels my creative spirit, inspiring me to
           design and build visually stunning websites that engage and captivate users. </p>
         <button @click="moveContainerLeft"
           class="bg-yellow-600 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase tracking-wide">Contact
@@ -17,7 +17,7 @@
       </div>
 
     </div>
-    <div class="sticky ml-48 mb-48">
+    <div class="sticky ml-48 mb-48 ">
       <a class="ml-3 text-gray-500" href="https://www.facebook.com/ome.ga.351" target="_blank" rel="noopener noreferrer">
         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10"
           viewBox="0 0 24 24">
@@ -95,7 +95,7 @@ export default {
     moveContainerLeft() {
       this.containerLeft = "-100px";
     },
- onScroll() {
+    onScroll() {
       if (window.pageYOffset <= 0) {
         this.$router.push('/projects');
         window.scroll({
