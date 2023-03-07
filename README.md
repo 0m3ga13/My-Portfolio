@@ -1,10 +1,38 @@
-# Portfolio2
+<h1 align="center">This is My Portfolio 🌟 </h1>
+<br>
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome to my portfolio! This website showcases my skills and experiences as a front-end developer. The website was built using Vue.js and styled with Tailwind CSS. 
 
-## Recommended IDE Setup
+## Table of Contents
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Getting Started](#getting-started)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Technologies Used
+
+This project was built using the following technologies:
+- [Vue.js](https://vuejs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vue Router](https://router.vuejs.org/)
+- [Vue CLI](https://cli.vuejs.org/)
+
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,vue,tailwind)](https://skillicons.dev)
+
+## Features
+
+This website includes the following features:
+- Home page with an introduction and list of skills
+- Projects page showcasing my previous projects
+- Contact page with a form to send me a message
+- page to download my resume
+
+## Getting Started
+
+To get a copy of this project up and running on your local machine, please follow these steps:
+
+1. Clone the repository
+git clone https://github.com/your-username/your-repository.git
+
 
 ## Customize configuration
 
@@ -27,3 +55,5 @@ npm run dev
 ```sh
 npm run build
 ```
+
+
