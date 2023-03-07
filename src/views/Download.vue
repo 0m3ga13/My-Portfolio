@@ -1,5 +1,5 @@
 <template>
-  <div class=" h-screen  bg-yellow-50 dark:bg-gray-900 dark:text-white overflow-hidden ">
+  <div class=" min-h-screen  bg-yellow-50 dark:bg-gray-900 dark:text-white overflow-hidden ">
     <div class="sm:flex py-24 items-center  justify-center">
       <div class="p-4 lg:w-1/2 md:w-full">
         <div class=" relative bg-white dark:bg-black dark:border-black font-semibold text-center rounded-3xl border shadow-lg p-10 ">
