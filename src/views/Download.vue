@@ -2,7 +2,7 @@
   <div class="h-screen  px-24 py-24 flex flex-wrap bg-yellow-50">
     <div class="flex flex-wrap  items-center  justify-center">
       <div class="p-4 lg:w-1/2 md:w-full">
-        <div class="flex border-2 rounded-lg shadow-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col bg-white/80">
+        <div class="flex border-2 rounded-lg shadow-lg border-gray-200 border-opacity-50 p-8 sm:flex-row bg-white/80">
           <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 flex-shrink-0">
             <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 width="80px" height="80px" viewBox="0 0 419.931 419.931"
