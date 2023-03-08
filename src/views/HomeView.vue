@@ -96,7 +96,7 @@ export default {
   const scrollOffset = window.pageYOffset * pixelRatio;
   const windowHeight = window.innerHeight * pixelRatio;
   const bodyHeight = document.body.offsetHeight * pixelRatio;
-      if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+      if ((windowHeight + scrollOffset) >= bodyHeight) {
         this.$router.push('/projects')
         window.scroll({
           top: windowHeight/50,
