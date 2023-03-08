@@ -1,6 +1,6 @@
 <template>
   <button type="button" @click="toggleDark()"
-    class="rounded-full dark:bg-gray-900 bg-white p-1 ml-5 text-gray-800 hover:text-amber-600 hover:bg-gray-900 dark:hover:bg-white  dark:hover:transform dark:hover:scale-125 dark:duration-300 dark:hover:rotate-45 hover:transform hover:scale-125 duration-300 hover:rotate-45" 
+    class="rounded-full dark:bg-gray-900 bg-yellow-50 p-1 ml-5 text-gray-900 dark:text-white hover:text-amber-600 hover:bg-gray-900 dark:hover:bg-white  dark:hover:transform dark:hover:scale-125 dark:duration-300 dark:hover:rotate-45 hover:transform hover:scale-125 duration-300 hover:rotate-45" 
     >
     {{ buttonText }}
   </button>
