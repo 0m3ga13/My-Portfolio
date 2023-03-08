@@ -89,6 +89,7 @@
 
 
 <script>
+import smoothscroll from 'smoothscroll-polyfill';
 export default {
   methods: {
     onScroll() {
@@ -114,6 +115,7 @@ export default {
     }
   },
   mounted() {
+    smoothscroll.polyfill();
     window.addEventListener('scroll', this.onScroll)
   },
   beforeDestroy() {
