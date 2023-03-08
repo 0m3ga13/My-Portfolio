@@ -9,13 +9,16 @@
 <script>
 import { useDark, useToggle } from '@vueuse/core';
 
-
 export default {
   name: 'MyComponent',
   data() {
     return {
       isDark: useDark(),
-      buttonText = '🌙',
+    }
+  },
+  computed: {
+    buttonText() {
+      return this.isDark ? '☀️' : '🌙';
     }
   },
   methods: {
@@ -23,10 +26,8 @@ export default {
       this.isDark = !this.isDark;
       if (this.isDark) {
         document.documentElement.classList.add('dark');
-        this.buttonText = '🌙';
       } else {
         document.documentElement.classList.remove('dark');
-        this.buttonText = '☀️';
       }
     }
   }
