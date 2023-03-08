@@ -60,7 +60,7 @@ export default {
       projects: [
         { name: 'Ecommerce Website', Description: 'a responsive website, using Vue and Tailwind.', image: 'https://github.com/0m3ga13/0m3ga13.github.io/blob/main/src/assets/img/electronics.png?raw=true', demosrc: 'https://masterpurple.netlify.app/', codesrc: 'https://github.com/0m3ga13/Ecommerce-Website' },
         { name: 'Business Website', Description: 'a MEVN stack website with a REST API', image: 'https://github.com/0m3ga13/0m3ga13.github.io/blob/main/src/assets/img/cominox.png?raw=true', demosrc: 'https://cominox.netlify.app/', codesrc: 'https://github.com/0m3ga13/cominox' },
-        { name: 'face recognition app', Description: 'Python script detecting faces in a video and store their names', image: 'https://source.unsplash.com/OfwiURcZwYw/1600x900', demosrc: 'https://github.com/0m3ga13/present_students_names', codesrc: 'https://github.com/0m3ga13/present_students_names' },
+        { name: 'face recognition app', Description: 'Python script to detect faces in a video and store their names, using OpenCV', image: 'https://source.unsplash.com/OfwiURcZwYw/1600x900', demosrc: 'https://github.com/0m3ga13/present_students_names', codesrc: 'https://github.com/0m3ga13/present_students_names' },
         { name: 'this portfolio', Description: 'Dynamic portfolio using Vue and Tailwind', image: 'https://github.com/0m3ga13/0m3ga13.github.io/blob/main/src/assets/img/portfolio.png?raw=true', demosrc: 'https://github.com/0m3ga13/present_students_names', codesrc: 'https://github.com/0m3ga13/present_students_names' },
         { name: 'Business Landing Page', Description: 'a simple landing page for a business', image: 'https://github.com/0m3ga13/0m3ga13.github.io/blob/main/src/assets/img/obsidex.png?raw=true', demosrc: 'https://github.com/0m3ga13/Obsidex-Landing-Page', codesrc: 'https://github.com/0m3ga13/Obsidex-Landing-Page' },
         { name: 'Influencer Contact Page', Description: 'Basic Arabic page for contacts', image: 'https://github.com/0m3ga13/0m3ga13.github.io/blob/main/src/assets/img/sid.png?raw=true', demosrc: 'https://oussama-sid.netlify.app/', codesrc: 'https://github.com/0m3ga13/Oussama-sid' },
@@ -75,19 +75,18 @@ export default {
       console.log(this.showOptionsFlag)
     },
     onScroll() {
-      const pixelRatio = window.devicePixelRatio || 1;
+  const pixelRatio = window.devicePixelRatio || 1;
   const scrollOffset = window.pageYOffset * pixelRatio;
   const windowHeight = window.innerHeight * pixelRatio;
   const bodyHeight = document.body.offsetHeight * pixelRatio;
         const threshold = windowHeight / 10;
-
-      if  if ((window.pageYOffset <= threshold)) {
+      if (window.pageYOffset <= threshold) {
         this.$router.push('/');
         window.scroll({
           top: windowHeight/90,
           behavior: 'smooth'
         });
-      if ((windowHeight + scrollOffset) >= bodyHeight - threshold) {
+      } else if ((windowHeight + scrollOffset) >= bodyHeight - threshold) {
         this.$router.push('/contact');
         window.scroll({
           top: windowHeight/90,
