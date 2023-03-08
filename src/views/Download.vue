@@ -91,13 +91,13 @@ export default {
       if (window.pageYOffset <= 0) {
         this.$router.push('/contact');
         window.scroll({
-          top: 5,
+          top: window.innerHeight/10,
           left: 0,
           behavior: 'smooth'
         });
       } else if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
                 window.scroll({
-          top: 10,
+          top: window.innerHeight/10,
           left: 0,
           behavior: 'smooth'
         });
