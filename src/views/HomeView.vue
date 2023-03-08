@@ -95,7 +95,7 @@ export default {
       if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
         this.$router.push('/projects')
         window.scroll({
-          top: 5,
+          top: window.innerHeight/50,
           left: 0,
           behavior: 'smooth'
         });
