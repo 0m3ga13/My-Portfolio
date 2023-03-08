@@ -122,28 +122,7 @@ export default {
   },
   mounted() {
     smoothscroll.polyfill();
-
-    // Disable smooth scrolling on mobile devices that don't support it
-    if ('scrollBehavior' in document.documentElement.style) {
-      // Use native smooth scrolling if available
-      window.addEventListener('scroll', this.onScroll);
-    } else {
-      // Use instant scrolling if smooth scrolling is not available
-      window.addEventListener('scroll', () => {
-        const pixelRatio = window.devicePixelRatio || 1;
-        const scrollOffset = window.pageYOffset * pixelRatio;
-        const windowHeight = window.innerHeight * pixelRatio;
-        const bodyHeight = document.body.offsetHeight * pixelRatio;
-        const threshold = windowHeight / 2;
-
-        if ((windowHeight + scrollOffset) >= bodyHeight - threshold) {
-          this.$router.push('/projects');
-          window.scrollTo(0, bodyHeight);
-        } else if ((window.pageYOffset <= threshold)) {
-          window.scrollTo(0, 0);
-        }
-      });
-    }
+    window.addEventListener('scroll', this.onScroll);
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.onScroll);
