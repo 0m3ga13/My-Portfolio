@@ -87,18 +87,22 @@
 export default {
   data() {
     return {
-      containeIsLeft = false,
+      containerIsLeft: false,
       containerLeft: "0px",
       lastScrollTop: 0,
     };
   },
   methods: {
     moveContainerLeft() {
-      if (!containeIsLeft){
-      this.containerLeft = "-100px";}
-      else if (containerIsLeft){
-      this.containerLeft = "100px";}
-    },
+     if (!this.containerIsLeft){
+        this.containerLeft = "-100px";
+        this.containerIsLeft = true;
+      }
+      else if (this.containerIsLeft){
+        this.containerLeft = "100px";
+        this.containerIsLeft = false;
+      }
+},
     onScroll() {
       if (window.pageYOffset <= 0) {
         this.$router.push('/projects');
