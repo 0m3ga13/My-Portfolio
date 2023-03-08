@@ -15,6 +15,7 @@ export default {
   data() {
     return {
       isDark: useDark(),
+      buttonText = '🌙',
     }
   },
   methods: {
