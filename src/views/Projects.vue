@@ -79,18 +79,18 @@ export default {
   const scrollOffset = window.pageYOffset * pixelRatio;
   const windowHeight = window.innerHeight * pixelRatio;
   const bodyHeight = document.body.offsetHeight * pixelRatio;
-      if (window.pageYOffset <= 0) {
+        const threshold = windowHeight / 10;
+
+      if  if ((window.pageYOffset <= threshold)) {
         this.$router.push('/');
         window.scroll({
-          top: windowHeight/50,
-          left: 0,
+          top: windowHeight/90,
           behavior: 'smooth'
         });
-      } else if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+      if ((windowHeight + scrollOffset) >= bodyHeight - threshold) {
         this.$router.push('/contact');
         window.scroll({
-          top: windowHeight/50,
-          left: 0,
+          top: windowHeight/90,
           behavior: 'smooth'
         });
       }
