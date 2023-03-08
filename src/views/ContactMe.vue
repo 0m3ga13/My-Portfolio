@@ -99,14 +99,14 @@ export default {
       if (window.pageYOffset <= 0) {
         this.$router.push('/projects');
         window.scroll({
-          top: window.innerHeight/10,
+          top: window.innerHeight/50,
           left: 0,
           behavior: 'smooth'
         });
       } else if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
         this.$router.push('/Downloads');
         window.scroll({
-          top: window.innerHeight/10,
+          top: window.innerHeight/50,
           left: 0,
           behavior: 'smooth'
         });
