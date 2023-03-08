@@ -87,13 +87,17 @@
 export default {
   data() {
     return {
+      containeIsLeft = false,
       containerLeft: "0px",
       lastScrollTop: 0,
     };
   },
   methods: {
     moveContainerLeft() {
-      this.containerLeft = "-100px";
+      if (!containeIsLeft){
+      this.containerLeft = "-100px";}
+      else if (containerIsLeft){
+      this.containerLeft = "100px";}
     },
     onScroll() {
       if (window.pageYOffset <= 0) {
