@@ -1,6 +1,6 @@
 <template>
   <header class=" border-b dark:border-gray-800  sticky bg-yellow-50 z-50 dark:bg-gray-900 dark:text-white  text-gray-600 body-font">
-    <div class="container mx-auto flex p-4 flex-col md:flex-row items-center">
+    <div class="container mx-auto flex p-5 flex-col md:flex-row items-center">
       <router-link to="/" class="flex title-font font-medium items-center text-gray-900 dark:text-white mb-4 md:mb-0">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1"
           class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
