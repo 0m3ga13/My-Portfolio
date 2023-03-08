@@ -102,7 +102,7 @@ export default {
       }
       else if ((window.pageYOffset <= 0)) {
         window.scroll({
-          top: 10,
+          top: window.innerHeight/50,
           left: 0,
           behavior: 'smooth'
         });
