@@ -89,8 +89,6 @@
 
 
 <script>
-import smoothscroll from 'smoothscroll-polyfill';
-
 export default {
   methods: {
     onScroll() {
@@ -98,30 +96,22 @@ export default {
       const scrollOffset = window.pageYOffset * pixelRatio;
       const windowHeight = window.innerHeight * pixelRatio;
       const bodyHeight = document.body.offsetHeight * pixelRatio;
-      const threshold = windowHeight / 3;
-
+      const threshold = windowHeight / 10;
       if ((windowHeight + scrollOffset) >= bodyHeight - threshold) {
         this.$router.push('/projects');
-        const duration = 1000; // Set the duration of the smooth scrolling behavior to 1 second
         window.scroll({
           top: windowHeight/90,
-          left: 0,
           behavior: 'smooth',
-          duration: duration // Set the duration option
         });
       } else if ((window.pageYOffset <= threshold)) {
-        const duration = 1000; // Set the duration of the smooth scrolling behavior to 1 second
         window.scroll({
           top: windowHeight/50,
-          left: 0,
           behavior: 'smooth',
-          duration: duration // Set the duration option
         });
       }
     }
   },
   mounted() {
-    smoothscroll.polyfill();
     window.addEventListener('scroll', this.onScroll);
   },
   beforeDestroy() {
