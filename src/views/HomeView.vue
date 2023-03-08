@@ -98,13 +98,13 @@ export default {
       const scrollOffset = window.pageYOffset * pixelRatio;
       const windowHeight = window.innerHeight * pixelRatio;
       const bodyHeight = document.body.offsetHeight * pixelRatio;
-      const threshold = windowHeight / 2;
+      const threshold = windowHeight / 3;
 
       if ((windowHeight + scrollOffset) >= bodyHeight - threshold) {
         this.$router.push('/projects');
         const duration = 1000; // Set the duration of the smooth scrolling behavior to 1 second
         window.scroll({
-          top: bodyHeight,
+          top: windowHeight/90,
           left: 0,
           behavior: 'smooth',
           duration: duration // Set the duration option
@@ -112,7 +112,7 @@ export default {
       } else if ((window.pageYOffset <= threshold)) {
         const duration = 1000; // Set the duration of the smooth scrolling behavior to 1 second
         window.scroll({
-          top: 0,
+          top: windowHeight/50,
           left: 0,
           behavior: 'smooth',
           duration: duration // Set the duration option
