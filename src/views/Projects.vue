@@ -75,17 +75,21 @@ export default {
       console.log(this.showOptionsFlag)
     },
     onScroll() {
+      const pixelRatio = window.devicePixelRatio || 1;
+  const scrollOffset = window.pageYOffset * pixelRatio;
+  const windowHeight = window.innerHeight * pixelRatio;
+  const bodyHeight = document.body.offsetHeight * pixelRatio;
       if (window.pageYOffset <= 0) {
         this.$router.push('/');
         window.scroll({
-          top: window.innerHeight/50,
+          top: windowHeight/50,
           left: 0,
           behavior: 'smooth'
         });
       } else if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
         this.$router.push('/contact');
         window.scroll({
-          top: window.innerHeight/50,
+          top: windowHeight/50,
           left: 0,
           behavior: 'smooth'
         });
