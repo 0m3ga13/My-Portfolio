@@ -84,8 +84,7 @@ export default {
       this.$router.push('/contact');
       console.log('contact ')
       console.log('up from projects'+scrollPercent)
-       scrollToTop() 
-      
+       scrollToTop()
     }
     },
     debounce(func, wait) {
