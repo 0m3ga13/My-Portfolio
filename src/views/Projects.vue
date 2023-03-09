@@ -86,12 +86,7 @@ export default {
       console.log('up from projects'+scrollPercent)
       
     }
-    else if (scrollPercent <= 0) {
-      this.$router.push('/');
-      console.log('home')
-      console.log('down from projects'+scrollPercent)
-
-    }},
+    },
     debounce(func, wait) {
     let timeout;
     return function () {
