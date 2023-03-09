@@ -29,7 +29,11 @@ const router = createRouter({
   
   ],
  scrollBehavior(to, from, savedPosition) {
-      document.getElementById("app").scrollIntoView({ behavior: "smooth" });
+      document.getElementById("app").scrollTo({
+  top: 100,
+  left: 100,
+  behavior: "smooth",
+});
   },
 })
 
