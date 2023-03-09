@@ -105,7 +105,6 @@ export default {
       this.$router.push('/Downloads');
       console.log('downloads')
       console.log('Up from contact' + scrollPercent)
-      scrollToTop() 
     }
     },
     debounce(func, wait) {
@@ -121,12 +120,7 @@ export default {
       timeout = setTimeout(later, wait);
     };
   },
-   scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  },
+ 
 },
 mounted() {
   window.addEventListener('scroll', this.debounce(this.handleScroll, 100));
