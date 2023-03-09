@@ -101,7 +101,7 @@ export default {
       console.log('projects')
       console.log('up from home'+scrollPercent)
   
-  },
+  }},
   debounce(func, wait) {
     let timeout;
     return function () {
