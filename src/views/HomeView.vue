@@ -100,7 +100,10 @@ export default {
       this.$router.push('/projects');
       console.log('projects')
       console.log('up from home'+scrollPercent)
-
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     }
   },
   debounce(func, wait) {
