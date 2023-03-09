@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen max-h-full  flex flex-col justify-center dark:bg-gray-900 dark:text-white items-center bg-yellow-50">
-    <div class="absolute mb-48 ">
+    <div class="absolute mb-48 md:mb-32 md:mt-10 ">
       <div class="relative bg-white dark:bg-black dark:border-black/50 font-semibold text-center rounded-3xl border shadow-lg p-10 max-w-xs z-10"
         :style="{ left: containerLeft, transition: 'left 1s' }">
 
