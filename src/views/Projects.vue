@@ -84,10 +84,7 @@ export default {
       this.$router.push('/contact');
       console.log('contact ')
       console.log('up from projects'+scrollPercent)
-        document.documentElement.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+       scrollToTop() 
       
     }
     },
@@ -104,12 +101,26 @@ export default {
       timeout = setTimeout(later, wait);
     };
   },
+   scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  },
 },
 mounted() {
   window.addEventListener('scroll',this.debounce(this.handleScroll, 100));
+if ('ontouchstart' in window) {
+    window.addEventListener('orientationchange', this.scrollToTop);
+  }
 },
+
 beforeDestroy() {
+  // Remove the scroll and orientationchange event listeners when the component is about to be destroyed
   window.removeEventListener('scroll', this.handleScroll);
+  if ('ontouchstart' in window) {
+    window.removeEventListener('orientationchange', this.scrollToTop);
+  }
 },
 };
 </script>
