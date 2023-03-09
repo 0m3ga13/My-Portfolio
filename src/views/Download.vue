@@ -79,41 +79,41 @@
 export default {
   data() {
     return {
-      containerLeft: "0px",
-      lastScrollTop: 0,
+    
+    scrollingToTop: false, 
+      
     };
   },
   methods: {
-    moveContainerLeft() {
-      this.containerLeft = "-100px";
-    },
-    onScroll() {
-   const pixelRatio = window.devicePixelRatio || 1;
-  const scrollOffset = window.pageYOffset * pixelRatio;
-  const windowHeight = window.innerHeight * pixelRatio;
-  const bodyHeight = document.body.offsetHeight * pixelRatio;
-      if (window.pageYOffset <= 0) {
-        this.$router.push('/contact');
-        window.scroll({
-          top: windowHeight/50,
-          left: 0,
-          behavior: 'smooth'
-        });
-      } else if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-                window.scroll({
-          top: windowHeight/50,
-          left: 0,
-          behavior: 'smooth'
-        });
-      }
-    }
+    handleScroll() {
+    // Calculate the current scroll position as a percentage of the total scrollable distance
+    const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    
+     if (scrollPercent <= 0) {
+      this.$router.push('/contact');
+      console.log('contact from downloads')
+      console.log('Download' + scrollPercent)
+    }},
+    debounce(func, wait) {
+    let timeout;
+    return function () {
+      const context = this;
+      const args = arguments;
+      const later = function () {
+        timeout = null;
+        func.apply(context, args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  },
 
   },
   mounted() {
-    window.addEventListener('scroll', this.onScroll)
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.onScroll)
-  }
+  window.addEventListener('scroll',this.debounce(this.handleScroll, 100));
+},
+beforeDestroy() {
+  window.removeEventListener('scroll', this.handleScroll);
+},
 };
 </script>
