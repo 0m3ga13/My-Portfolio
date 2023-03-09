@@ -12,7 +12,7 @@
         <p class="text-xs text-gray-600 mt-4 dark:text-gray-400"> My passion for web development fuels my creative spirit, inspiring me to
           design and build visually stunning websites that engage and captivate users. </p>
         <button @click="moveContainerLeft"
-          class="bg-yellow-600 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase tracking-wide">Contact
+          class="bg-yellow-600 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase tracking-wide">Download
           Me</button>
       </div>
 
@@ -87,50 +87,51 @@
 export default {
   data() {
     return {
-      containerIsLeft: false,
       containerLeft: "0px",
-      lastScrollTop: 0,
+      lastScrollTop: 0,      scrollingToTop: false, 
+      
     };
   },
   methods: {
     moveContainerLeft() {
-     if (!this.containerIsLeft){
-        this.containerLeft = "-100px";
-        this.containerIsLeft = true;
-      }
-      else if (this.containerIsLeft){
-        this.containerLeft = "50px";
-        this.containerIsLeft = false;
-      }
-},
-    onScroll() {
-      const pixelRatio = window.devicePixelRatio || 1;
-  const scrollOffset = window.pageYOffset * pixelRatio;
-  const windowHeight = window.innerHeight * pixelRatio;
-  const bodyHeight = document.body.offsetHeight * pixelRatio;
-      if (window.pageYOffset <= 0) {
-        this.$router.push('/projects');
-        window.scroll({
-          top: windowHeight/50,
-          left: 0,
-          behavior: 'smooth'
-        });
-      } else if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-        this.$router.push('/Downloads');
-        window.scroll({
-          top: windowHeight/50,
-          left: 0,
-          behavior: 'smooth'
-        });
-      }
-    }
+      this.containerLeft = "-100px";
+    },
+    handleScroll() {
+    // Calculate the current scroll position as a percentage of the total scrollable distance
+    const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    
+    // If the scroll position is greater than 50%, push to the /contact route
+    if (scrollPercent > 80) {
+      this.$router.push('/Downloads');
+      console.log('downloads')
+      console.log('Up from contact' + scrollPercent)
 
+    }
+    else if (scrollPercent <= 0) {
+      this.$router.push('/projects');
+      console.log('projects from contact')
+      console.log('down from contact' + scrollPercent)
+
+    }},
+    debounce(func, wait) {
+    let timeout;
+    return function () {
+      const context = this;
+      const args = arguments;
+      const later = function () {
+        timeout = null;
+        func.apply(context, args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
   },
-  mounted() {
-    window.addEventListener('scroll', this.onScroll)
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.onScroll)
-  }
+},
+mounted() {
+  window.addEventListener('scroll', this.debounce(this.handleScroll, 100));
+},
+beforeDestroy() {
+  window.removeEventListener('scroll', this.handleScroll);
+},
 };
 </script>
