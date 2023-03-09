@@ -91,31 +91,38 @@
 <script>
 export default {
   methods: {
-    onScroll() {
-      const pixelRatio = window.devicePixelRatio || 1;
-      const scrollOffset = window.pageYOffset * pixelRatio;
-      const windowHeight = window.innerHeight * pixelRatio;
-      const bodyHeight = document.body.offsetHeight * pixelRatio;
-      const threshold = windowHeight / 10;
-      if ((windowHeight + scrollOffset) >= bodyHeight - threshold) {
-        this.$router.push('/projects');
-        window.scroll({
-          top: windowHeight/90,
-          behavior: 'smooth',
-        });
-      } else if ((window.pageYOffset <= threshold)) {
-        window.scroll({
-          top: windowHeight/50,
-          behavior: 'smooth',
-        });
-      }
+    handleScroll() {
+    // Calculate the current scroll position as a percentage of the total scrollable distance
+    const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    
+    // If the scroll position is greater than 50%, push to the /contact route
+    if (scrollPercent > 80) {
+      this.$router.push('/projects');
+      console.log('projects')
+      console.log('up from home'+scrollPercent)
+
     }
   },
-  mounted() {
-    window.addEventListener('scroll', this.onScroll);
+  debounce(func, wait) {
+    let timeout;
+    return function () {
+      const context = this;
+      const args = arguments;
+      const later = function () {
+        timeout = null;
+        func.apply(context, args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
   },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.onScroll);
-  }
+  
+},
+mounted() {
+  window.addEventListener('scroll', this.debounce(this.handleScroll, 100));
+},
+beforeDestroy() {
+  window.removeEventListener('scroll', this.handleScroll);
+},
 };
 </script>
