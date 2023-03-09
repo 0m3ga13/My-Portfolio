@@ -84,7 +84,6 @@ export default {
       this.$router.push('/contact');
       console.log('contact ')
       console.log('up from projects'+scrollPercent)
-       scrollToTop()
     }
     },
     debounce(func, wait) {
@@ -100,12 +99,7 @@ export default {
       timeout = setTimeout(later, wait);
     };
   },
-   scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  },
+   
 },
 mounted() {
   window.addEventListener('scroll',this.debounce(this.handleScroll, 100));
