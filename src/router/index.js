@@ -27,13 +27,12 @@ const router = createRouter({
       component: Download,
     },
   
-  ],
- scrollBehavior(to, from, savedPosition) {
-      document.getElementById("app").scrollTo({
-  top: 100,
-  left: 100,
-  behavior: "smooth",
-});
+  ],scrollBehavior(to, from, savedPosition) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({ left: 0, top: 0, behavior: 'smooth' })
+      }, 500)
+    })
   },
 })
 
