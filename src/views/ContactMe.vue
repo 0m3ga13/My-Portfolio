@@ -12,7 +12,7 @@
         <p class="text-xs text-gray-600 mt-4 dark:text-gray-400"> My passion for web development fuels my creative spirit, inspiring me to
           design and build visually stunning websites that engage and captivate users. </p>
         <button @click="moveContainerLeft"
-          class="bg-yellow-600 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase tracking-wide">Download
+          class="bg-yellow-600 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase tracking-wide">Contact
           Me</button>
       </div>
 
