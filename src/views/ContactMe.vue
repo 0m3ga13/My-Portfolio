@@ -127,9 +127,17 @@ export default {
 },
 mounted() {
   window.addEventListener('scroll', this.debounce(this.handleScroll, 100));
+if ('ontouchstart' in window) {
+    window.addEventListener('orientationchange', this.scrollToTop);
+  }
 },
+
 beforeDestroy() {
+  // Remove the scroll and orientationchange event listeners when the component is about to be destroyed
   window.removeEventListener('scroll', this.handleScroll);
+  if ('ontouchstart' in window) {
+    window.removeEventListener('orientationchange', this.scrollToTop);
+  }
 },
 };
 </script>
