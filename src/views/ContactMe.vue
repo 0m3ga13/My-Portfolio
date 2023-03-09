@@ -105,7 +105,10 @@ export default {
       this.$router.push('/Downloads');
       console.log('downloads')
       console.log('Up from contact' + scrollPercent)
-
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     }
     },
     debounce(func, wait) {
