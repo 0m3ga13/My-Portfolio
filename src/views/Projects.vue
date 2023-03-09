@@ -84,6 +84,10 @@ export default {
       this.$router.push('/contact');
       console.log('contact ')
       console.log('up from projects'+scrollPercent)
+        window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
       
     }
     },
