@@ -107,12 +107,7 @@ export default {
       console.log('Up from contact' + scrollPercent)
 
     }
-    else if (scrollPercent <= 0) {
-      this.$router.push('/projects');
-      console.log('projects from contact')
-      console.log('down from contact' + scrollPercent)
-
-    }},
+    },
     debounce(func, wait) {
     let timeout;
     return function () {
