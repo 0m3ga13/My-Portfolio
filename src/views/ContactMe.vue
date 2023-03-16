@@ -101,7 +101,7 @@ export default {
         this.containerIsLeft = true;
       }
       else if (this.containerIsLeft){
-        this.containerLeft = "100px";
+        this.containerLeft = "0px";
         this.containerIsLeft = false;
       }},
     handleScroll() {
