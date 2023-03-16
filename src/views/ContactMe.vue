@@ -88,6 +88,8 @@ export default {
   data() {
     return {
       containerLeft: "0px",
+            containerIsLeft: false,
+
       lastScrollTop: 0,      scrollingToTop: false, 
       
     };
