@@ -93,9 +93,15 @@ export default {
     };
   },
   methods: {
-    moveContainerLeft() {
-      this.containerLeft = "-100px";
-    },
+  moveContainerLeft() {
+      if (!this.containerIsLeft){
+        this.containerLeft = "-100px";
+        this.containerIsLeft = true;
+      }
+      else if (this.containerIsLeft){
+        this.containerLeft = "100px";
+        this.containerIsLeft = false;
+      }},
     handleScroll() {
     // Calculate the current scroll position as a percentage of the total scrollable distance
     const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
