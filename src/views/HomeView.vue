@@ -10,7 +10,7 @@
         <p class="description mb-8 leading-relaxed lg:text-4xl md:text-2xl text-xl dark:text-white">an enthusiastic web developer</p>
       </div>
       <a class="lg:max-w-xl lg:w-full w-1/2 mb-10 md:mb-0 " href="https://github.com/0m3ga13/" target="_blank">
-        <img class="imagecontainer shadow-lg object-cover object-center rounded lg:w-3/4 rounded-3xl" alt="hero"
+        <img class="imagecontainer shadow-lg object-cover object-center rounded lg:w-3/4 rounded-3xl" alt="Oussama-Barka"
           src="https://media.licdn.com/dms/image/C4E03AQF5mTvMbEiUkg/profile-displayphoto-shrink_800_800/0/1653662430008?e=1683763200&v=beta&t=D5NSepCEGC5nm8u9XH3d6MLN2R1V1i6FIEugo9MyCos">
       </a>
     </div>
