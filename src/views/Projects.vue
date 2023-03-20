@@ -10,7 +10,7 @@
 
             <img :src=item.image alt="image slide 1" />
 
-            <div v-if="showOptionsFlag" class="options">
+            <div v-if="showOptionsFlag" ref="options" class="options">
               <a :href="item.demosrc" target="_blank">View Demo</a>
               <a :href="item.codesrc" target="_blank">View Code</a>
             </div>
@@ -80,11 +80,15 @@ export default {
       this.showOptionsFlag = !this.showOptionsFlag;
       console.log(this.showOptionsFlag)
     },
-    handleOutsideClick(event) {
-      if (!this.$refs.options.contains(event.target)) {
-        this.showOptionsFlag = false;
-      }
-    },
+   handleOutsideClick(event) {
+  // get the reference to the options div using $refs
+  const options = this.$refs.options;
+
+  // check if the clicked element is not within the options div
+  if (options && !options.contains(event.target)) {
+    this.showOptionsFlag = false;
+  }
+},
     handleScroll() {
       // Calculate the current scroll position as a percentage of the total scrollable distance
       const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
