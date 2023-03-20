@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex flex-col  items-center bg-yellow-50 dark:bg-gray-900 dark:text-white overflow-hidden">
+  <div class="min-h-screen flex flex-col md:justify-center items-center bg-yellow-50 dark:bg-gray-900 dark:text-white overflow-hidden">
     <div class=" container mx-auto flex px-5 py-24 sm:py-10 md:flex-row flex-col items-center">
       <h1 class="projects text-4xl sm:text-7xl dark:text-white">My Projects</h1>
       <swiper :modules="modules" navigation
@@ -71,10 +71,6 @@ export default {
     }
   },
   methods: {
-  handleOutsideClick(event) {
-    if (!this.$refs.options.contains(event.target)) {
-      this.showOptionsFlag = false;
-    },
     showOptions() {
       this.showOptionsFlag = !this.showOptionsFlag;
       console.log(this.showOptionsFlag)
@@ -88,6 +84,11 @@ export default {
       this.$router.push('/contact');
       console.log('contact ')
       console.log('up from projects'+scrollPercent)
+      window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+      
     }
     },
     debounce(func, wait) {
@@ -103,26 +104,12 @@ export default {
       timeout = setTimeout(later, wait);
     };
   },
-   
 },
 mounted() {
   window.addEventListener('scroll',this.debounce(this.handleScroll, 100));
-  document.addEventListener('click', this.handleOutsideClick);
-
-if ('ontouchstart' in window) {
-    window.addEventListener('orientationchange', this.scrollToTop);
-  }
-  
 },
-
 beforeDestroy() {
-  document.removeEventListener('click', this.handleOutsideClick);
-
-  // Remove the scroll and orientationchange event listeners when the component is about to be destroyed
   window.removeEventListener('scroll', this.handleScroll);
-  if ('ontouchstart' in window) {
-    window.removeEventListener('orientationchange', this.scrollToTop);
-  }
 },
 };
 </script>
