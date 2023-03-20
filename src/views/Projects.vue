@@ -1,5 +1,6 @@
 <template>
-  <div class="min-h-screen flex flex-col md:justify-center items-center bg-yellow-50 dark:bg-gray-900 dark:text-white overflow-hidden">
+  <div
+    class="min-h-screen flex flex-col md:justify-center items-center bg-yellow-50 dark:bg-gray-900 dark:text-white overflow-hidden">
     <div class=" container mx-auto flex px-5 py-24 sm:py-10 md:flex-row flex-col items-center">
       <h1 class="projects text-4xl sm:text-7xl dark:text-white">My Projects</h1>
       <swiper :modules="modules" navigation
@@ -29,7 +30,11 @@
       </svg>
     </router-link>
     <router-link to="/contact" class="sm:hidden max-sm:fixed bottom-5 transition-colors duration-300">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-15 h-10 animate-bounce bi bi-arrow-up" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/> </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-15 h-10 animate-bounce bi bi-arrow-up"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+      </svg>
     </router-link>
   </div>
 </template>
@@ -75,42 +80,50 @@ export default {
       this.showOptionsFlag = !this.showOptionsFlag;
       console.log(this.showOptionsFlag)
     },
+    handleOutsideClick(event) {
+      if (!this.$refs.options.contains(event.target)) {
+        this.showOptionsFlag = false;
+      }
+    },
     handleScroll() {
-    // Calculate the current scroll position as a percentage of the total scrollable distance
-    const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-    
-    // If the scroll position is greater than 50%, push to the /contact route
-    if (scrollPercent > 80) {
-      this.$router.push('/contact');
-      console.log('contact ')
-      console.log('up from projects'+scrollPercent)
-      window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-      
-    }
+      // Calculate the current scroll position as a percentage of the total scrollable distance
+      const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+      // If the scroll position is greater than 50%, push to the /contact route
+      if (scrollPercent > 80) {
+        this.$router.push('/contact');
+        console.log('contact ')
+        console.log('up from projects' + scrollPercent)
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+
+      }
     },
     debounce(func, wait) {
-    let timeout;
-    return function () {
-      const context = this;
-      const args = arguments;
-      const later = function () {
-        timeout = null;
-        func.apply(context, args);
+      let timeout;
+      return function () {
+        const context = this;
+        const args = arguments;
+        const later = function () {
+          timeout = null;
+          func.apply(context, args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
       };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
+    },
   },
-},
-mounted() {
-  window.addEventListener('scroll',this.debounce(this.handleScroll, 100));
-},
-beforeDestroy() {
-  window.removeEventListener('scroll', this.handleScroll);
-},
+  mounted() {
+    window.addEventListener('scroll', this.debounce(this.handleScroll, 100));
+    document.addEventListener('click', this.handleOutsideClick);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+    document.removeEventListener('click', this.handleOutsideClick);
+
+  },
 };
 </script>
   
@@ -192,5 +205,4 @@ beforeDestroy() {
     transform: translateY(0px);
     opacity: 1;
   }
-}
-</style>
+}</style>
