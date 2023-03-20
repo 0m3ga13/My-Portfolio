@@ -80,15 +80,7 @@ export default {
       this.showOptionsFlag = !this.showOptionsFlag;
       console.log(this.showOptionsFlag)
     },
-   handleOutsideClick(event) {
-  // get the reference to the options div using $refs
-  const options = this.$refs.options;
-
-  // check if the clicked element is not within the options div
-  if (options && !options.contains(event.target)) {
-    this.showOptionsFlag = false;
-  }
-},
+ 
     handleScroll() {
       // Calculate the current scroll position as a percentage of the total scrollable distance
       const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
@@ -121,11 +113,9 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.debounce(this.handleScroll, 100));
-    document.addEventListener('click', this.handleOutsideClick);
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
-    document.removeEventListener('click', this.handleOutsideClick);
 
   },
 };
