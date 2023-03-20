@@ -121,11 +121,11 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.debounce(this.handleScroll, 100));
-    windoow.addEventListener('click', this.handleOutsideClick);
+    document.addEventListener('click', this.handleOutsideClick);
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
-    windoow.removeEventListener('click', this.handleOutsideClick);
+    document.removeEventListener('click', this.handleOutsideClick);
 
   },
 };
