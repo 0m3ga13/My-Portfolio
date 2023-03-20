@@ -71,6 +71,10 @@ export default {
     }
   },
   methods: {
+  handleOutsideClick(event) {
+    if (!this.$refs.options.contains(event.target)) {
+      this.showOptionsFlag = false;
+    },
     showOptions() {
       this.showOptionsFlag = !this.showOptionsFlag;
       console.log(this.showOptionsFlag)
@@ -103,12 +107,17 @@ export default {
 },
 mounted() {
   window.addEventListener('scroll',this.debounce(this.handleScroll, 100));
+  document.addEventListener('click', this.handleOutsideClick);
+
 if ('ontouchstart' in window) {
     window.addEventListener('orientationchange', this.scrollToTop);
   }
+  
 },
 
 beforeDestroy() {
+  document.removeEventListener('click', this.handleOutsideClick);
+
   // Remove the scroll and orientationchange event listeners when the component is about to be destroyed
   window.removeEventListener('scroll', this.handleScroll);
   if ('ontouchstart' in window) {
