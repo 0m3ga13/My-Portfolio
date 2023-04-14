@@ -61,7 +61,7 @@
           <div class="flex-grow">
             <h2 class="text-gray-900 dark:text-white text-xl title-font mb-3">My resume</h2>
             <p class="leading-relaxed font-thin text-base">As a polytechnical engineer with experience as a content operations specialist, I channel my enthusiasm and creativity into web development, constantly seeking innovative ways to turn my ideas into digital reality.</p>
-            <a class="mt-3 text-yellow-500 inline-flex items-center" href="https://drive.google.com/file/d/1VHXmugd2tccfqAfCTaqgBNdDhZJbN_W1/view?usp=sharing" target="_blank" rel="noopener noreferrer">More about me
+            <a class="mt-3 text-yellow-500 inline-flex items-center" href="https://drive.google.com/file/d/1urQn2-YNDL8OxbRi9iY2IsVz7fy7rsV1/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">More about me
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
