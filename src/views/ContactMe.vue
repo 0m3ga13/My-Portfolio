@@ -5,7 +5,7 @@
         :style="{ left: containerLeft, transition: 'left 1s' }">
 
         <img class="mb-3 w-32 h-32 rounded-full shadow-lg mx-auto"
-          src="https://media.licdn.com/dms/image/C4E03AQF5mTvMbEiUkg/profile-displayphoto-shrink_800_800/0/1653662430008?e=1683763200&v=beta&t=D5NSepCEGC5nm8u9XH3d6MLN2R1V1i6FIEugo9MyCos"
+          src="https://avatars.githubusercontent.com/u/62702326?s=800&v=4"
           alt="web developer">
         <h1 class="text-lg text-gray-700 dark:text-gray-200">Oussama BARKA </h1>
         <h3 class="text-sm text-gray-400 dark:text-gray-600"> web developer </h3>
