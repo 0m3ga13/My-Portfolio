@@ -64,6 +64,7 @@ export default {
       scrollingToTop: false,
 
       projects: [
+        { name: 'Bicycle Eshop', Description: 'a responsive website using React and Threejs', image: 'https://github.com/0m3ga13/0m3ga13.github.io/blob/main/src/assets/img/bicyx.png?raw=true', demosrc: 'https://bicyx.netlify.app/', codesrc: 'https://github.com/0m3ga13/Bicy-x' },
         { name: 'Ecommerce Website', Description: 'a responsive website, using Vue and Tailwind.', image: 'https://github.com/0m3ga13/0m3ga13.github.io/blob/main/src/assets/img/electronics.png?raw=true', demosrc: 'https://masterpurple.netlify.app/', codesrc: 'https://github.com/0m3ga13/Ecommerce-Website' },
         { name: 'Business Website', Description: 'a MEVN stack website with a REST API', image: 'https://github.com/0m3ga13/0m3ga13.github.io/blob/main/src/assets/img/cominox.png?raw=true', demosrc: 'https://cominox.netlify.app/', codesrc: 'https://github.com/0m3ga13/cominox' },
         { name: 'face recognition app', Description: 'Python script to detect faces in a video and store their names, using OpenCV', image: 'https://source.unsplash.com/OfwiURcZwYw/1600x900', demosrc: 'https://github.com/0m3ga13/present_students_names', codesrc: 'https://github.com/0m3ga13/present_students_names' },
